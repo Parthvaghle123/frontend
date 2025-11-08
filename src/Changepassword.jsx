@@ -23,7 +23,7 @@ const ChangePassword = () => {
     setAlertMessage(""); // Clear old alerts
 
     try {
-      const res = await axios.post("http://localhost:3001/verify-email", {
+      const res = await axios.post("https://backend-t19q.onrender.com/verify-email", {
         email: email.toLowerCase(),
       });
 
@@ -66,7 +66,7 @@ const ChangePassword = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3001/change-password", {
+      const res = await axios.post("https://backend-t19q.onrender.com/change-password", {
         email: email.toLowerCase(),
         newPassword,
       });

@@ -23,7 +23,7 @@ const AdminLogin = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://localhost:3001/admin/login", {
+      const res = await axios.post("https://backend-t19q.onrender.com/admin/login", {
         username,
         password,
       });

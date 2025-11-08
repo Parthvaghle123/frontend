@@ -21,7 +21,7 @@ const Dashboard = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:3001/api/admin/stats', {
+        const response = await axios.get('https://backend-t19q.onrender.com/api/admin/stats', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

@@ -21,7 +21,7 @@ const Navbar = ({ username, setUsername }) => {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await fetch('http://localhost:3001/logout', {
+        await fetch('https://backend-t19q.onrender.com/logout', {
           method: 'POST',
           headers: { Authorization: `Bearer ${token}` },
         });

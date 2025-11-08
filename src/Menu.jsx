@@ -24,7 +24,7 @@ const Item = () => {
         setLoading(true);
 
         const response = await axios.get(
-          "http://localhost:3001/api/products?displayOnMenu=true"
+          "https://backend-t19q.onrender.com/api/products?displayOnMenu=true"
         );
 
         // Set products immediately
@@ -83,7 +83,7 @@ const Item = () => {
     }
     try {
       await axios.post(
-        "http://localhost:3001/add-to-cart",
+        "https://backend-t19q.onrender.com/add-to-cart",
         {
           productId: product._id,
           image: product.image,

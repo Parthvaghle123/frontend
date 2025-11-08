@@ -26,7 +26,7 @@ const Check = () => {
       if (!token) return;
 
       try {
-        const res = await axios.get("http://localhost:3001/user/profile", {
+        const res = await axios.get("https://backend-t19q.onrender.com/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFormData((prev) => ({
@@ -133,7 +133,7 @@ const placeOrder = async (e) => {
       cardNumber: rawCardNumber,
     };
 
-    await axios.post("http://localhost:3001/order", payload, {
+    await axios.post("https://backend-t19q.onrender.com/order", payload, {
       headers: { Authorization: `Bearer ${token}` },
     });
 

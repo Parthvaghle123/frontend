@@ -19,7 +19,7 @@ const Orders = () => {
   const fetchOrders = () => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3001/orders", {
+      .get("https://backend-t19q.onrender.com/orders", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setOrders(res.data.orders || res.data))
@@ -38,7 +38,7 @@ const Orders = () => {
 
     try {
       await axios.put(
-        `http://localhost:3001/api/cancel-order/${cancelOrderId}`,
+        `https://backend-t19q.onrender.com/api/cancel-order/${cancelOrderId}`,
         { reason: reasonToSend },
         { headers: { Authorization: `Bearer ${token}` } }
       );
